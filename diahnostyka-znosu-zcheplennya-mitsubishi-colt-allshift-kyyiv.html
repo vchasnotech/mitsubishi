@@ -2,12 +2,12 @@
 <html lang="uk" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO METADATA (ДІАГНОСТИКА ЗНОСУ ЗЧЕПЛЕННЯ COLT ALLSHIFT КИЇВ) -->
-    <title>Діагностика зносу зчеплення Mitsubishi Colt AllShift Київ — Замір у мм по Live Data | MUT-III SE</title>
-    <meta name="description" content="Виїзна діагностика залишкового ресурсу зчеплення Mitsubishi Colt AllShift у Києві. Замір товщини диска в мм та ходу штока актуатора через сканер MUT-III SE без зняття КПП. Точна відповідь: міняти чи ще поїздить.">
-    <meta name="keywords" content="диагностика сцепления кольт робот киев, остаток сцепления mitsubishi colt allshift, clutch position mut 3 colt, как узнать износ сцепления кольт без снятия, проверка сцепления смарт форфоур робот, телеметрия live data allshift киев">
+    <!-- SEO METADATA -->
+    <title>Діагностика зносу зчеплення Mitsubishi Colt AllShift Київ — 1 500 грн з виїздом</title>
+    <meta name="description" content="СТО приговорює зчеплення на 15 000 - 25 000 грн? Виїзна комп'ютерна діагностика зносу диска без зняття КПП за 1 500 грн у Києві. Дізнайтеся точно: міняти чи ще поїздить.">
+    <meta name="keywords" content="діагностика зчеплення кольт ціна київ, замір зносу зчеплення кольт allshift 1500 грн, перевірка сцепления митсубиси кольт робот киев">
 
     <!-- GOOGLE FONTS (HUD TECH STYLE) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,6 @@
                     colors: {
                         hud: {
                             cyan: '#00F0FF',
-                            cyanDark: '#0891B2',
                             yellow: '#FACC15',
                             red: '#F43F5E',
                             bg: '#070B12',
@@ -38,8 +37,8 @@
                     },
                     boxShadow: {
                         'hud-cyan': '0 0 25px rgba(0, 240, 255, 0.35)',
-                        'hud-yellow': '0 0 20px rgba(250, 204, 21, 0.25)',
                         'hud-tg': '0 0 30px rgba(34, 158, 217, 0.5)',
+                        'hud-yellow': '0 0 20px rgba(250, 204, 21, 0.25)',
                     }
                 }
             }
@@ -49,270 +48,191 @@
     <!-- FONT AWESOME ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- ALPINE.JS CDN -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-    <!-- SCHEMA.ORG (CLUTCH TELEMETRY DIAGNOSTICS) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoRepair",
-      "name": "Виїзна діагностика зносу зчеплення Mitsubishi Colt Live Data Київ",
-      "description": "Професійне визначення залишкового ресурсу та товщини диска зчеплення КПП AllShift (Getrag 6S15) у міліметрах за допомогою параметрів телеметрії MUT-III SE без демонтажу коробки передач.",
-      "areaServed": [
-        {"@type": "AdministrativeArea", "name": "Солом'янський район"},
-        {"@type": "AdministrativeArea", "name": "Голосіївський район"},
-        {"@type": "AdministrativeArea", "name": "Печерський район"},
-        {"@type": "AdministrativeArea", "name": "Подільський район"},
-        {"@type": "AdministrativeArea", "name": "Святошинський район"},
-        {"@type": "AdministrativeArea", "name": "Шевченківський район"}
-      ],
-      "serviceType": [
-        "Зчитування параметра Clutch Position / Touch Point Target",
-        "Оцінка залишкового ходу штока актуатора зчеплення",
-        "Діагностика зносу зчеплення AllShift без зняття КПП",
-        "Комп'ютерна експертиза трансмісії перед купівлею Colt"
-      ]
-    }
-    </script>
-
     <style>
         .hud-border {
             border: 1px solid rgba(0, 240, 255, 0.25);
-            background: linear-gradient(135deg, rgba(13, 21, 36, 0.9) 0%, rgba(7, 11, 18, 0.95) 100%);
+            background: linear-gradient(135deg, rgba(13, 21, 36, 0.95) 0%, rgba(7, 11, 18, 0.98) 100%);
         }
         .digital-glow {
             text-shadow: 0 0 12px currentColor;
         }
+        .bg-grid-hud {
+            background-image: radial-gradient(rgba(0, 240, 255, 0.12) 1px, transparent 1px);
+            background-size: 28px 28px;
+        }
     </style>
 </head>
-<body class="bg-hud-bg text-slate-100 font-sans antialiased pb-28 selection:bg-hud-cyan selection:text-black">
+<body class="bg-hud-bg text-slate-100 font-sans antialiased pb-24 lg:pb-0 selection:bg-hud-cyan selection:text-black">
 
-    <!-- TOP TELEMETRY STATUS BAR -->
-    <div class="border-b border-hud-border/80 bg-slate-950/90 backdrop-blur-md px-4 py-2 sticky top-0 z-40">
-        <div class="max-w-md mx-auto flex items-center justify-between text-xs font-tech tracking-wider">
+    <!-- TOP BAR -->
+    <div class="border-b border-hud-border/80 bg-slate-950/90 backdrop-blur-md px-4 py-2.5 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto flex items-center justify-between text-xs font-tech tracking-wider">
             <div class="flex items-center gap-2 text-hud-cyan">
-                <span class="inline-block w-2 h-2 rounded-full bg-hud-cyan animate-ping"></span>
-                <span>LIVE DATA: ТЕЛЕМЕТРІЯ ALLSHIFT</span>
+                <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                <span class="font-bold">КИЇВ • ВИЇЗНА ЕКСПЕРТИЗА COLT</span>
             </div>
-            <a href="https://t.me/carhelpuabot" target="_blank" rel="noopener" class="text-hud-tg hover:underline font-bold flex items-center gap-1.5">
-                <i class="fa-brands fa-telegram text-sm"></i>
+            <a href="https://t.me/carhelpuabot" target="_blank" rel="noopener" class="text-hud-tg hover:underline font-bold flex items-center gap-1.5 uppercase">
+                <i class="fa-brands fa-telegram text-base"></i>
                 <span>Telegram</span>
             </a>
         </div>
     </div>
 
-    <!-- 1. HERO SECTION & LIVE DATA CLUSTER -->
-    <header class="px-4 pt-6 pb-6 max-w-md mx-auto">
-        
-        <!-- Category Pill -->
-        <div class="inline-flex items-center gap-2 px-3 py-1 bg-hud-cyan/10 border border-hud-cyan/40 text-hud-cyan font-tech text-xs tracking-widest uppercase rounded-sm mb-3">
-            <i class="fa-solid fa-chart-line"></i>
-            <span>MUT-III SE • Точний замір у мм • Без зняття КПП</span>
-        </div>
-
-        <!-- H1 Headline -->
-        <h1 class="font-tech text-3xl font-bold uppercase text-white leading-tight mb-4">
-            Діагностика зносу зчеплення <span class="text-hud-cyan">Colt AllShift</span> у Києві
-        </h1>
-
-        <!-- SOS DASHBOARD CLUSTER: CLIENT QUESTION -->
-        <div class="p-5 hud-border rounded-xl shadow-hud-cyan mb-6 relative overflow-hidden border-hud-cyan/40">
-            <div class="absolute -right-6 -bottom-6 text-7xl font-tech text-hud-cyan/5 font-bold select-none pointer-events-none">
-                DATA mm
+    <!-- 1. HERO SECTION (БОЛЬ: ДОРОГО МІНЯТИ VS РІШЕННЯ ЗА 1500 ГРН) -->
+    <header class="relative bg-grid-hud border-b border-hud-border py-10 lg:py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-hud-yellow/15 border border-hud-yellow/40 text-hud-yellow font-tech text-xs tracking-widest uppercase rounded mb-4">
+                <i class="fa-solid fa-calculator"></i>
+                <span>Захист від непотрібного ремонту на 20 000+ грн</span>
             </div>
 
-            <!-- Virtual Instrument Readout -->
-            <div class="bg-black/90 border border-hud-cyan/60 p-3 rounded-lg mb-4">
-                <div class="text-[10px] font-tech text-slate-400 uppercase tracking-wider mb-1">Головний запит автовласника:</div>
-                <div class="text-base font-tech text-hud-yellow font-bold uppercase digital-glow leading-tight">
-                    «Чи варто вже міняти счеплення, чи воно ще спокійно поїздить?»
+            <h1 class="font-tech text-3xl sm:text-5xl font-bold uppercase text-white leading-tight mb-4">
+                СТО каже міняти зчеплення? <br>
+                <span class="text-hud-yellow digital-glow">Не витрачайте гроші наосліп!</span>
+            </h1>
+
+            <!-- Price Cluster Card -->
+            <div class="hud-border p-6 rounded-2xl max-w-xl mx-auto mb-6 text-left relative overflow-hidden shadow-hud-cyan">
+                <div class="flex items-baseline justify-between border-b border-slate-800 pb-3 mb-4">
+                    <div>
+                        <span class="text-[11px] font-tech text-slate-400 uppercase tracking-widest block">Ціна комп'ютерного заміру:</span>
+                        <span class="text-4xl font-tech font-bold text-hud-cyan digital-glow">1 500 грн</span>
+                    </div>
+                    <span class="px-2.5 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-tech font-bold uppercase rounded">
+                        Виїзд включено
+                    </span>
                 </div>
-                <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-300 mt-2">
-                    <span class="bg-cyan-950/60 border border-cyan-800/80 px-2 py-0.5 rounded text-cyan-300">Товщина диска в мм</span>
-                    <span class="bg-cyan-950/60 border border-cyan-800/80 px-2 py-0.5 rounded text-cyan-300">Залишок ходу штока</span>
-                </div>
+
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-2 font-light">
+                    Заміна зчеплення на роботі Colt — це <strong>від 18 000 до 25 000 грн</strong> за запчастини та роботу. Тільки за зняття коробки «аби подивитися» сервіси беруть від 4 000 грн.
+                </p>
+                <p class="text-hud-yellow font-tech text-sm font-bold uppercase leading-snug">
+                    👉 Ризикніть 1 500 грн, щоб дізнатися точний стан у міліметрах: воно дійсно стерте чи спокійно проїде ще 30 000 км?
+                </p>
             </div>
 
-            <h2 class="font-tech text-lg uppercase text-white font-bold leading-tight mb-2">
-                Не платіть СТО 4 000 – 6 000 грн за зняття коробки «аби подивитися»!
-            </h2>
-            <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                Через дилерський сканер MUT-III SE ми дивимося реальну заводську телеметрію блоку TCM: точні міліметри товщини накладок та залишковий робочий хід штока актуатора. 
-                <strong class="text-hud-cyan">Ви отримуєте 100% об'єктивну відповідь у цифрах за 10 хвилин на виїзді.</strong>
-            </p>
-
-            <!-- Telegram Primary CTA -->
-            <a href="https://t.me/carhelpuabot" target="_blank" rel="noopener" class="w-full py-4 bg-hud-tg hover:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-3 rounded-lg shadow-hud-tg transition-transform active:scale-95 text-center">
-                <i class="fa-brands fa-telegram text-2xl"></i>
-                <span>Написати в Telegram</span>
-            </a>
-            <div class="text-center text-[11px] text-slate-400 font-tech mt-2">
-                Швидкий виїзд майстра по Києву • Точні дані без розбору
+            <!-- CTA Button -->
+            <div class="max-w-md mx-auto">
+                <a href="https://t.me/carhelpuabot" target="_blank" rel="noopener" class="w-full py-4 px-8 bg-hud-tg hover:bg-sky-500 text-white font-tech text-xl uppercase tracking-wider font-bold flex items-center justify-center gap-3 rounded-lg shadow-hud-tg transition-transform active:scale-95 text-center">
+                    <i class="fa-brands fa-telegram text-2xl"></i>
+                    <span>Написати в Telegram</span>
+                </a>
+                <span class="text-xs text-slate-400 font-tech mt-2 block">
+                    ⚡ Приїдемо до авто за 30-60 хв • Тест займає 10 хвилин
+                </span>
             </div>
+
         </div>
-
     </header>
 
-    <!-- 2. WHAT WE MEASURE (TECHNICAL LIVE DATA PARAMETERS) -->
-    <section class="px-4 py-3 max-w-md mx-auto">
-        <div class="flex items-center gap-2 mb-3">
-            <span class="w-2.5 h-2.5 bg-hud-cyan rounded-sm"></span>
-            <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide">
-                Параметри, які ми зчитуємо:
+    <!-- 2. ПОРІВНЯННЯ: ВИТРАТИТИ 20 000 ГРН ЧИ ПЕРЕВІРИТИ ЗА 1 500 ГРН -->
+    <section class="py-10 px-4 max-w-4xl mx-auto border-b border-hud-border">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-tech">
+            
+            <!-- Bad Path -->
+            <div class="p-5 bg-hud-card border border-rose-500/40 rounded-xl relative">
+                <div class="text-hud-red font-bold uppercase text-xs tracking-wider mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                    <span>Повірити СТО на слово</span>
+                </div>
+                <div class="text-2xl font-bold text-white mb-2">~20 000 – 25 000 грн</div>
+                <ul class="text-xs text-slate-300 font-sans space-y-1.5 leading-snug">
+                    <li>❌ Купівля дорогого комплекту зчеплення завчасно.</li>
+                    <li>❌ Оплата 4 000 – 6 000 грн тільки за демонтаж КПП.</li>
+                    <li>❌ Часто виявляється, що старе зчеплення було ще на 50% живе, а проблема була лише в налаштуванні.</li>
+                </ul>
+            </div>
+
+            <!-- Smart Path -->
+            <div class="p-5 bg-hud-card border border-hud-cyan/50 rounded-xl relative shadow-hud-cyan">
+                <div class="text-hud-cyan font-bold uppercase text-xs tracking-wider mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Зробити замір за 1 500 грн</span>
+                </div>
+                <div class="text-2xl font-bold text-hud-cyan mb-2">1 500 грн (Фіксовано)</div>
+                <ul class="text-xs text-slate-300 font-sans space-y-1.5 leading-snug">
+                    <li>✅ Підключаємо спецсканер прямо у вашому дворі без розбору.</li>
+                    <li>✅ Бачимо реальний залишок фрикціонів у міліметрах.</li>
+                    <li>✅ <strong>У 7 з 10 випадків</strong> зчеплення міняти не треба — достатньо простої адаптації!</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. ЩО ВИ ОТРИМУЄТЕ (3 ВЕРДИКТИ) -->
+    <section class="py-10 px-4 max-w-4xl mx-auto border-b border-hud-border">
+        <div class="text-center mb-6">
+            <h2 class="font-tech text-xl sm:text-2xl font-bold uppercase text-white">
+                Яку відповідь ви отримаєте через 10 хвилин:
             </h2>
         </div>
 
         <div class="space-y-3 font-tech">
             
-            <div class="p-4 bg-hud-card border-l-4 border-l-hud-cyan border border-hud-border rounded-r-lg">
-                <div class="flex items-center justify-between text-white font-bold text-base uppercase mb-1">
-                    <span>Clutch Position / Touch Point Target</span>
-                    <i class="fa-solid fa-ruler-combined text-hud-cyan"></i>
+            <div class="p-3.5 bg-hud-card border-l-4 border-l-emerald-500 border border-hud-border rounded-r-lg flex items-center justify-between">
+                <div>
+                    <h3 class="text-white font-bold uppercase text-sm">🟢 Залишок 50% - 80% • Заміна не потрібна!</h3>
+                    <p class="text-slate-300 font-sans text-xs mt-0.5">Диск у повному порядку. Ви щойно заощадили 20 000 грн.</p>
                 </div>
-                <p class="text-xs text-slate-300 font-sans leading-snug">
-                    Фактична координата точки торкання дисків. Показує товщину фрикційних накладок з точністю до десятих часток міліметра відносно заводського нуля нового комплекту.
-                </p>
+                <span class="text-emerald-400 font-bold text-xs uppercase hidden sm:block">Економія</span>
             </div>
 
-            <div class="p-4 bg-hud-card border-l-4 border-l-hud-yellow border border-hud-border rounded-r-lg">
-                <div class="flex items-center justify-between text-white font-bold text-base uppercase mb-1">
-                    <span>Actuator Pushrod Stroke Reserve</span>
-                    <i class="fa-solid fa-arrows-left-right text-hud-yellow"></i>
+            <div class="p-3.5 bg-hud-card border-l-4 border-l-hud-yellow border border-hud-border rounded-r-lg flex items-center justify-between">
+                <div>
+                    <h3 class="text-white font-bold uppercase text-sm">🟡 Залишок 30% - 40% • Робочий знос</h3>
+                    <p class="text-slate-300 font-sans text-xs mt-0.5">Знос є, але машина спокійно проїде ще 20 000 – 30 000 км без ризику.</p>
                 </div>
-                <p class="text-xs text-slate-300 font-sans leading-snug">
-                    Залишковий робочий хід штока актуатора счеплення. Дає розуміння, чи є ще запас механічного вильоту для автоматичної компенсації зносу сервоприводом.
-                </p>
+                <span class="text-hud-yellow font-bold text-xs uppercase hidden sm:block">Ще поїздить</span>
             </div>
 
-            <div class="p-4 bg-hud-card border-l-4 border-l-emerald-500 border border-hud-border rounded-r-lg">
-                <div class="flex items-center justify-between text-white font-bold text-base uppercase mb-1">
-                    <span>Clutch Slippage & Engagement Speed</span>
-                    <i class="fa-solid fa-bolt text-emerald-400"></i>
+            <div class="p-3.5 bg-hud-card border-l-4 border-l-hud-red border border-hud-border rounded-r-lg flex items-center justify-between">
+                <div>
+                    <h3 class="text-white font-bold uppercase text-sm">🔴 Залишок менше 15% • Критичний стан</h3>
+                    <p class="text-slate-300 font-sans text-xs mt-0.5">Тепер ви на 100% впевнені, що заміна дійсно неминуча, а не вигадана майстрами.</p>
                 </div>
-                <p class="text-xs text-slate-300 font-sans leading-snug">
-                    Коефіцієнт пробуксовки при передачі крутного моменту. Дозволяє виявити втому пелюсток корзини або перегрів маховика під навантаженням.
-                </p>
+                <span class="text-hud-red font-bold text-xs uppercase hidden sm:block">Точний факт</span>
             </div>
 
         </div>
     </section>
 
-    <!-- 3. WEAR SCALE (CLEAR VERDICT FOR CLIENT) -->
-    <section class="px-4 py-4 max-w-md mx-auto">
-        <div class="flex items-center gap-2 mb-3">
-            <span class="w-2.5 h-2.5 bg-hud-yellow rounded-sm"></span>
-            <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide">
-                Зрозуміла шкала стану вузла:
+    <!-- 4. РАЙОНИ ВИЇЗДУ -->
+    <section class="py-8 px-4 max-w-4xl mx-auto border-b border-hud-border">
+        <div class="text-center mb-4">
+            <h2 class="font-tech text-base font-bold uppercase text-slate-300 tracking-wider">
+                📍 Виїжджаємо по 6 районах Києва:
             </h2>
         </div>
 
-        <div class="space-y-2.5 font-tech text-xs">
-            
-            <div class="p-3 bg-hud-card border border-emerald-500/40 rounded-lg flex items-start gap-3">
-                <span class="w-7 h-7 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center justify-center font-bold rounded flex-shrink-0 text-sm">
-                    70%+
-                </span>
-                <div>
-                    <h3 class="text-white font-bold uppercase text-sm">Відмінний ресурс</h3>
-                    <p class="text-slate-300 font-sans text-xs mt-0.5 leading-snug">
-                        Зчеплення у повному порядку. Заміна не потрібна! Якщо є пинки — проблему вирішить проста планова адаптація за 15 хвилин.
-                    </p>
-                </div>
-            </div>
-
-            <div class="p-3 bg-hud-card border border-amber-500/40 rounded-lg flex items-start gap-3">
-                <span class="w-7 h-7 bg-amber-500/10 text-hud-yellow border border-amber-500/30 flex items-center justify-center font-bold rounded flex-shrink-0 text-sm">
-                    40%
-                </span>
-                <div>
-                    <h3 class="text-white font-bold uppercase text-sm">Середній робочий знос</h3>
-                    <p class="text-slate-300 font-sans text-xs mt-0.5 leading-snug">
-                        Зчеплення зношене наполовину, але повністю робоче. Можна спокійно їздити ще 25 000 – 40 000 км без ризику раптової зупинки.
-                    </p>
-                </div>
-            </div>
-
-            <div class="p-3 bg-hud-card border border-rose-500/40 rounded-lg flex items-start gap-3">
-                <span class="w-7 h-7 bg-rose-500/10 text-hud-red border border-rose-500/30 flex items-center justify-center font-bold rounded flex-shrink-0 text-sm">
-                    15%
-                </span>
-                <div>
-                    <h3 class="text-white font-bold uppercase text-sm">Критичний стан (Упор штока)</h3>
-                    <p class="text-slate-300 font-sans text-xs mt-0.5 leading-snug">
-                        Ресурс на межі. Шток актуатора висунутий на максимум. Рекомендується планова заміна комплекту, доки авто не випало в аварійний прочерк «–».
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Quick TG Send Question Button -->
-        <div class="mt-4">
-            <a href="https://t.me/carhelpuabot" target="_blank" rel="noopener" class="w-full py-3.5 bg-slate-900 border border-hud-cyan/50 text-hud-cyan hover:bg-hud-cyan hover:text-black font-tech text-base uppercase tracking-wider font-bold flex items-center justify-center gap-2 rounded-lg transition-colors text-center">
-                <i class="fa-brands fa-telegram text-lg"></i>
-                <span>Написати в Telegram</span>
-            </a>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-center font-tech text-xs">
+            <div class="p-2 bg-hud-card border border-hud-border rounded text-slate-300">Солом'янський</div>
+            <div class="p-2 bg-hud-card border border-hud-border rounded text-slate-300">Голосіївський</div>
+            <div class="p-2 bg-hud-card border border-hud-border rounded text-slate-300">Печерський</div>
+            <div class="p-2 bg-hud-card border border-hud-border rounded text-slate-300">Подільський</div>
+            <div class="p-2 bg-hud-card border border-hud-border rounded text-slate-300">Святошинський</div>
+            <div class="p-2 bg-hud-card border border-hud-border rounded text-slate-300">Шевченківський</div>
         </div>
     </section>
 
-    <!-- 4. IDEAL FOR PRE-PURCHASE INSPECTION -->
-    <section class="px-4 py-4 max-w-md mx-auto">
-        <div class="p-4 bg-gradient-to-br from-slate-900 to-black border border-hud-yellow/40 rounded-xl">
-            <div class="flex items-center gap-2 text-hud-yellow font-tech text-sm font-bold uppercase mb-2">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <span>Ідеально при купівлі Mitsubishi Colt</span>
-            </div>
-            <p class="text-slate-300 text-xs font-sans leading-relaxed">
-                Купуєте вживаний Colt з роботом? Продавець каже: <em>«Зчеплення міняли 10 тисяч тому»</em>? 
-                Ми підключимося на виїзді за 10 хвилин і покажемо реальний стан диска в міліметрах. Це вагомий привід для аргументованого торгу або захисту від покупки авто з мертвою трансмісією!
-            </p>
-        </div>
+    <!-- 5. FINAL ACTION BLOCK -->
+    <section class="py-12 px-4 max-w-2xl mx-auto text-center">
+        <h2 class="font-tech text-2xl sm:text-3xl font-bold uppercase text-white mb-3">
+            Сумніваєтесь, чи варто міняти зчеплення?
+        </h2>
+        <p class="text-slate-300 text-sm mb-6 font-light">
+            Напишіть у Telegram — ми приїдемо прямо до авто та за 10 хвилин покажемо точні міліметри зносу на екрані приладу.
+        </p>
+
+        <a href="https://t.me/carhelpuabot" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-4 bg-hud-tg hover:bg-sky-500 text-white font-tech text-xl uppercase tracking-wider font-bold rounded-lg shadow-hud-tg transition-transform active:scale-95 text-center">
+            <i class="fa-brands fa-telegram text-2xl"></i>
+            <span>Написати в Telegram</span>
+        </a>
     </section>
 
-    <!-- 5. DISTRICTS OF SERVICE (KYIV) -->
-    <section class="px-4 py-6 max-w-md mx-auto">
-        <div class="p-5 hud-border rounded-xl">
-            <div class="flex items-center gap-2 mb-3">
-                <i class="fa-solid fa-location-dot text-hud-cyan"></i>
-                <h2 class="font-tech text-lg font-bold uppercase text-white tracking-wide">
-                    Виїзд майстра по 6 районах Києва:
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-2 gap-2 text-xs font-tech">
-                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Солом'янський</div>
-                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Голосіївський</div>
-                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Печерський</div>
-                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Подільський</div>
-                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Святошинський</div>
-                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Шевченківський</div>
-            </div>
-            <p class="text-[11px] text-slate-400 mt-2 font-tech">
-                *Приїжджаємо до вашого авто на стоянку, у двір або на місце огляду перед покупкою.
-            </p>
-        </div>
-    </section>
-
-    <!-- 6. FINAL BOTTOM CTA BLOCK -->
-    <section class="px-4 py-8 max-w-md mx-auto text-center">
-        <div class="p-6 bg-gradient-to-b from-slate-900 to-black border border-hud-cyan/40 rounded-2xl shadow-hud-cyan">
-            <h2 class="font-tech text-2xl font-bold uppercase text-white mb-2 leading-tight">
-                Дізнайтеся точний стан зчеплення
-            </h2>
-            <p class="text-slate-300 text-sm mb-6 leading-relaxed font-sans">
-                Не витрачайте гроші на здогадки некваліфікованих майстрів. Напишіть у Telegram — ми приїдемо з комплексом MUT-III SE та надамо чіткий числовий звіт по Live Data.
-            </p>
-
-            <a href="https://t.me/carhelpuabot" target="_blank" rel="noopener" class="w-full py-4 bg-hud-tg hover:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-3 rounded-lg shadow-hud-tg transition-transform active:scale-95 text-center">
-                <i class="fa-brands fa-telegram text-2xl"></i>
-                <span>Написати в Telegram</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- 7. PERSISTENT FIXED MOBILE FOOTER (FAST THUMB TAP) -->
-    <div class="fixed bottom-0 left-0 right-0 z-50 p-3 bg-slate-950/95 border-t border-hud-border/80 backdrop-blur-xl">
+    <!-- MOBILE STICKY BUTTON -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 p-3 bg-slate-950/95 border-t border-hud-border/80 backdrop-blur-xl lg:hidden">
         <div class="max-w-md mx-auto">
             <a href="https://t.me/carhelpuabot" target="_blank" rel="noopener" class="w-full py-3.5 bg-hud-tg active:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 rounded-lg shadow-hud-tg">
                 <i class="fa-brands fa-telegram text-2xl animate-pulse"></i>
