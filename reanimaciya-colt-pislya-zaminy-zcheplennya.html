@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO METADATA -->
-    <title>Невдала адаптація AllShift Mitsubishi Colt після заміни зчеплення/актуатора Київ | MUT-III SE</title>
-    <meta name="description" content="Замінили зчеплення або актуатор на Mitsubishi Colt AllShift і авто перетворилося на нерухомість після універсального сканера? Виїзна реанімація дилерським комплексом MUT-III SE по Києву. Запустимо авто прямо на СТО чи парковці.">
-    <meta name="keywords" content="після заміни зчеплення кольт горить 0, невдала адаптація лаунчем кольт робот, заміна актуатора allshift не заводиться київ, виїзд mut-3 кольт київ, після адаптації прочерк кольт, адаптація зчеплення кольт після сто">
+    <title>Не заводиться Mitsubishi Colt після заміни зчеплення або актуатора Київ — Виїзд майстра</title>
+    <meta name="description" content="Замінили зчеплення або актуатор на Colt AllShift і авто зависло в «0» чи «–»? Приїдемо на СТО чи у двір по Києву, знімемо блокування та адаптуємо коробку на місці. Поїдете своїм ходом.">
+    <meta name="keywords" content="після заміни зчеплення кольт горить 0, після адаптації не заводиться кольт, заміна актуатора allshift зависла коробка київ, виїзд адаптація кольт київ">
 
     <!-- GOOGLE FONTS (HUD TECH STYLE) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,14 +23,12 @@
                     colors: {
                         hud: {
                             cyan: '#00F0FF',
-                            cyanDark: '#0891B2',
                             yellow: '#FACC15',
                             red: '#F43F5E',
                             bg: '#070B12',
                             card: '#0D1524',
                             border: '#1E293B',
                             tg: '#229ED9',
-                            tgHover: '#1B87BC',
                         }
                     },
                     fontFamily: {
@@ -39,7 +37,6 @@
                     },
                     boxShadow: {
                         'hud-cyan': '0 0 25px rgba(0, 240, 255, 0.35)',
-                        'hud-yellow': '0 0 20px rgba(250, 204, 21, 0.25)',
                         'hud-tg': '0 0 30px rgba(34, 158, 217, 0.5)',
                         'hud-red': '0 0 25px rgba(244, 63, 94, 0.5)',
                     }
@@ -50,33 +47,6 @@
 
     <!-- FONT AWESOME ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- ALPINE.JS CDN -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-    <!-- SCHEMA.ORG -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoRepair",
-      "name": "Виїзна реанімація AllShift Mitsubishi Colt після заміни зчеплення Київ",
-      "description": "Спеціалізоване калібрування дилерським приладом MUT-III SE після механічної заміни зчеплення чи актуатора на КПП Getrag 6S15. Виведення авто з аварійного стану 0 після спроб адаптації Launch, Delphi, Autel.",
-      "areaServed": [
-        {"@type": "AdministrativeArea", "name": "Солом'янський район"},
-        {"@type": "AdministrativeArea", "name": "Голосіївський район"},
-        {"@type": "AdministrativeArea", "name": "Печерський район"},
-        {"@type": "AdministrativeArea", "name": "Подільський район"},
-        {"@type": "AdministrativeArea", "name": "Святошинський район"},
-        {"@type": "AdministrativeArea", "name": "Шевченківський район"}
-      ],
-      "serviceType": [
-        "Адаптація нового зчеплення AllShift MUT-III SE",
-        "Прописування нового актуатора зчеплення",
-        "Виведення блоку TCM з зависання 0 після мультимарочного сканера",
-        "Діагностика та стирання помилок P1825, P1861 на виїзді"
-      ]
-    }
-    </script>
 
     <style>
         .hud-border {
@@ -94,12 +64,12 @@
 </head>
 <body class="bg-hud-bg text-slate-100 font-sans antialiased pb-24 lg:pb-0 selection:bg-hud-cyan selection:text-black">
 
-    <!-- TOP TELEMETRY STATUS BAR -->
-    <div class="border-b border-hud-border/80 bg-slate-950/90 backdrop-blur-md px-4 py-2 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto flex items-center justify-between text-xs font-tech tracking-wider">
+    <!-- TOP BAR -->
+    <div class="border-b border-hud-border/80 bg-slate-950/90 backdrop-blur-md px-4 py-2.5 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto flex items-center justify-between text-xs font-tech tracking-wider">
             <div class="flex items-center gap-2 text-hud-cyan">
                 <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-                <span class="font-bold">MUT-III SE ONLINE: ВИЇЗД ПО КИЄВУ</span>
+                <span class="font-bold">КИЇВ: МАЙСТЕР НА ЗВ'ЯЗКУ 24/7</span>
             </div>
             <a href="https://t.me/carhelpuabot" target="_blank" rel="noopener" class="text-hud-tg hover:underline font-bold flex items-center gap-1.5 uppercase">
                 <i class="fa-brands fa-telegram text-base"></i>
@@ -108,379 +78,178 @@
         </div>
     </div>
 
-    <!-- 1. HERO SECTION -->
-    <header class="relative bg-grid-hud border-b border-hud-border py-12 lg:py-20 px-4">
-        <div class="max-w-6xl mx-auto">
+    <!-- 1. HERO SECTION (БОЛЬ І РІШЕННЯ З ПЕРШОГО ЕКРАНУ) -->
+    <header class="relative bg-grid-hud border-b border-hud-border py-12 lg:py-16 px-4">
+        <div class="max-w-5xl mx-auto text-center">
             
-            <div class="inline-flex items-center gap-2 px-3 py-1 bg-hud-red/15 border border-hud-red/40 text-hud-red font-tech text-xs tracking-widest uppercase rounded mb-4">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-hud-red/15 border border-hud-red/40 text-hud-red font-tech text-xs tracking-widest uppercase rounded mb-5">
                 <i class="fa-solid fa-triangle-exclamation"></i>
-                <span>Типова катастрофа після звичайного СТО • Mitsubishi Colt AllShift</span>
+                <span>Екстрений виїзд до вашого авто по Києву</span>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                
-                <!-- Left Main Content -->
-                <div class="lg:col-span-7">
-                    <h1 class="font-tech text-3xl sm:text-5xl lg:text-6xl font-bold uppercase text-white leading-tight mb-4">
-                        Замінили зчеплення чи актуатор, а машина <span class="text-hud-red digital-glow">перетворилася на нерухомість?</span>
-                    </h1>
+            <h1 class="font-tech text-3xl sm:text-5xl lg:text-6xl font-bold uppercase text-white leading-tight mb-5">
+                Замінили зчеплення чи актуатор, <br class="hidden sm:inline">
+                а Colt <span class="text-hud-red digital-glow">перетворився на нерухомість?</span>
+            </h1>
 
-                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-6 font-light">
-                        На автосервісі поставили нові запчастини, підключили мультимарочний сканер (Launch, Delphi, Autocom), адаптація обірвалася — і тепер на табло горить 
-                        <span class="font-tech font-bold text-hud-red bg-black/60 px-2 py-0.5 border border-hud-red">«0»</span> або 
-                        <span class="font-tech font-bold text-hud-yellow bg-black/60 px-2 py-0.5 border border-hud-yellow">«–»</span>, 
-                        стартер мовчить, а майстри розводять руками?
-                    </p>
-
-                    <div class="p-4 bg-hud-card border-l-4 border-l-hud-cyan border border-hud-border rounded-r-lg mb-8">
-                        <div class="text-white font-tech font-bold uppercase text-sm mb-1 flex items-center gap-2">
-                            <i class="fa-solid fa-circle-check text-hud-cyan"></i>
-                            <span>Не поспішайте купувати інший блок TCM чи викликати евакуатор!</span>
-                        </div>
-                        <p class="text-slate-300 text-xs sm:text-sm font-sans leading-snug">
-                            Ми приїдемо прямо на те СТО чи паркінг із дилерським спецкомплексом <strong>MUT-III SE</strong>, виведемо блок із коми та виконаємо заводське навчання вузла з першого разу.
-                        </p>
-                    </div>
-
-                    <!-- CTA Group -->
-                    <div class="flex flex-col sm:flex-row items-center gap-4">
-                        <a href="https://t.me/carhelpuabot" target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 bg-hud-tg hover:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-3 rounded-lg shadow-hud-tg transition-all hover:scale-105 active:scale-95 text-center">
-                            <i class="fa-brands fa-telegram text-2xl"></i>
-                            <span>Написати в Telegram</span>
-                        </a>
-                        <span class="text-xs text-slate-400 font-tech uppercase tracking-wide text-center sm:text-left">
-                            ⚡ Оперативний виїзд у всі 6 районів Києва
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Right HUD Cluster (Visual Problem Box) -->
-                <div class="lg:col-span-5">
-                    <div class="hud-border p-6 rounded-2xl shadow-hud-red relative">
-                        <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
-                            <span class="text-xs font-tech text-slate-400 uppercase tracking-widest">Стан блоку TCM</span>
-                            <span class="px-2 py-0.5 bg-rose-500/20 text-hud-red border border-rose-500/40 text-[11px] font-tech font-bold uppercase rounded">
-                                FATAL_HALT
-                            </span>
-                        </div>
-
-                        <!-- Virtual Cluster -->
-                        <div class="flex items-center justify-center gap-3 py-4 bg-black/80 border border-slate-800 rounded-xl mb-4">
-                            <div class="text-center">
-                                <span class="text-[10px] font-tech text-slate-500 uppercase block mb-1">Щиток</span>
-                                <div class="w-16 h-20 bg-neutral-950 border-2 border-hud-red rounded flex items-center justify-center text-hud-red font-tech text-5xl font-bold digital-glow">
-                                    0
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <span class="text-[10px] font-tech text-slate-500 uppercase block mb-1">Аварія</span>
-                                <div class="w-16 h-20 bg-neutral-950 border border-hud-yellow rounded flex items-center justify-center text-hud-yellow font-tech text-4xl font-bold digital-glow">
-                                    –
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="space-y-2 text-xs font-tech text-slate-300">
-                            <div class="flex items-center justify-between p-2 bg-slate-900/60 rounded">
-                                <span>❌ Дозвіл на запуск:</span>
-                                <span class="text-hud-red font-bold">ЗАБЛОКОВАНО</span>
-                            </div>
-                            <div class="flex items-center justify-between p-2 bg-slate-900/60 rounded">
-                                <span>❌ Калібрування актуатора:</span>
-                                <span class="text-hud-red font-bold">СТЕРТО (EEPROM 0x00)</span>
-                            </div>
-                            <div class="flex items-center justify-between p-2 bg-slate-900/60 rounded">
-                                <span>❌ Помилки:</span>
-                                <span class="text-hud-yellow font-bold">P1825 / P1861</span>
-                            </div>
-                        </div>
-
-                        <div class="mt-5 pt-4 border-t border-slate-800 text-center">
-                            <a href="https://t.me/carhelpuabot" target="_blank" rel="noopener" class="w-full py-3 bg-hud-cyan/10 hover:bg-hud-cyan text-hud-cyan hover:text-black border border-hud-cyan font-tech text-sm uppercase tracking-wider font-bold flex items-center justify-center gap-2 rounded transition-colors">
-                                <i class="fa-brands fa-telegram text-base"></i>
-                                <span>Написати в Telegram</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
+            <!-- Emergency Status Cluster -->
+            <div class="inline-flex items-center justify-center gap-3 py-3 px-5 bg-black/80 border border-hud-red rounded-xl mb-6 shadow-hud-red">
+                <span class="font-tech text-3xl sm:text-4xl font-bold text-hud-red digital-glow">0</span>
+                <span class="text-slate-500 font-tech font-bold text-xl">або</span>
+                <span class="font-tech text-3xl sm:text-4xl font-bold text-hud-yellow digital-glow">–</span>
+                <span class="text-xs sm:text-sm font-tech text-slate-300 text-left ml-2 border-l border-slate-800 pl-3 leading-snug">
+                    Горить на щитку • Стартер заблоковано • Машина не заводиться
+                </span>
             </div>
+
+            <p class="max-w-3xl mx-auto text-slate-300 text-base sm:text-xl font-light leading-relaxed mb-8">
+                Спробували навчити коробку звичайним сканером, вона зависла в аварії, а на сервісі розводять руками і пропонують купувати новий блок? 
+                <strong class="text-hud-cyan font-bold block sm:inline mt-1 sm:mt-0">Не викликайте евакуатор!</strong> 
+                Ми приїдемо прямо на СТО або паркінг зі спеціальним обладнанням, виведемо авто зі ступору і ви поїдете своїм ходом.
+            </p>
+
+            <!-- Main CTA Button -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+                <a href="https://t.me/carhelpuabot" target="_blank" rel="noopener" class="w-full py-4 px-8 bg-hud-tg hover:bg-sky-500 text-white font-tech text-xl uppercase tracking-wider font-bold flex items-center justify-center gap-3 rounded-lg shadow-hud-tg transition-transform active:scale-95 text-center">
+                    <i class="fa-brands fa-telegram text-2xl"></i>
+                    <span>Написати в Telegram</span>
+                </a>
+            </div>
+            
+            <p class="text-xs text-slate-400 font-tech mt-3">
+                ⚡ Відповідаємо за 2-5 хвилин • Виїжджаємо до авто одразу після звернення
+            </p>
 
         </div>
     </header>
 
-    <!-- 2. PAIN POINTS / ЧОМУ ЦЕ СТАЛОСЯ -->
-    <section class="py-12 lg:py-16 px-4 max-w-6xl mx-auto border-b border-hud-border">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-            <span class="text-hud-yellow font-tech text-xs uppercase tracking-widest font-bold block mb-1">[ АНАТОМІЯ ПОМИЛКИ СТО ]</span>
-            <h2 class="font-tech text-2xl sm:text-4xl font-bold uppercase text-white">
-                Чому універсальні сканери вбивають трансмісію AllShift
-            </h2>
-            <div class="w-16 h-1 bg-hud-cyan mx-auto mt-3"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 font-tech">
-            
-            <div class="p-5 bg-hud-card border-l-4 border-l-hud-red border border-hud-border rounded-r-xl">
-                <div class="flex items-center justify-between mb-3">
-                    <span class="text-2xl font-bold text-hud-red">01</span>
-                    <i class="fa-solid fa-microchip text-slate-500 text-lg"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white uppercase mb-2">Обнулення без перезапису</h3>
-                <p class="text-xs text-slate-300 font-sans leading-relaxed">
-                    Мультимарочники (Launch, Autel, Delphi) вміють лише затерти старі байти зчеплення в блоці TCM, але не мають правильного таймінгу дилерського протоколу, щоб записати нові. Процедура падає на 50%.
-                </p>
-            </div>
-
-            <div class="p-5 bg-hud-card border-l-4 border-l-hud-yellow border border-hud-border rounded-r-xl">
-                <div class="flex items-center justify-between mb-3">
-                    <span class="text-2xl font-bold text-hud-yellow">02</span>
-                    <i class="fa-solid fa-ban text-slate-500 text-lg"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white uppercase mb-2">Блок зависає у стані «0»</h3>
-                <p class="text-xs text-slate-300 font-sans leading-relaxed">
-                    Після перерваного циклу блок управління трансмісією блокує стартер, переходить у нескінченний аварійний цикл перезавантаження і не реагує на повторні спроби адаптації звичайними приладами.
-                </p>
-            </div>
-
-            <div class="p-5 bg-hud-card border-l-4 border-l-hud-red border border-hud-border rounded-r-xl">
-                <div class="flex items-center justify-between mb-3">
-                    <span class="text-2xl font-bold text-hud-red">03</span>
-                    <i class="fa-solid fa-triangle-exclamation text-slate-500 text-lg"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white uppercase mb-2">Ризик спалити новий актуатор</h3>
-                <p class="text-xs text-slate-300 font-sans leading-relaxed">
-                    Намагаючись запустити авто, майстри на СТО починають підкидати 12V на мотори актуатора напряму або крутити шток викруткою, що призводить до злизування пластикових шестерень та виходу з ладу датчиків Холла.
-                </p>
-            </div>
-
-            <div class="p-5 bg-hud-card border-l-4 border-l-hud-yellow border border-hud-border rounded-r-xl">
-                <div class="flex items-center justify-between mb-3">
-                    <span class="text-2xl font-bold text-hud-yellow">04</span>
-                    <i class="fa-solid fa-coins text-slate-500 text-lg"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white uppercase mb-2">Незрозумілі витрати грошей</h3>
-                <p class="text-xs text-slate-300 font-sans leading-relaxed">
-                    Ви вже заплатили 8 000 – 15 000 грн за зчеплення і роботу, а тепер сервіс перекладає провину: <em>«У вас згорів комп'ютер, ми тут ні до чого, купуйте новий блок або забирайте авто»</em>.
-                </p>
-            </div>
-
-            <div class="p-5 bg-hud-card border-l-4 border-l-hud-red border border-hud-border rounded-r-xl">
-                <div class="flex items-center justify-between mb-3">
-                    <span class="text-2xl font-bold text-hud-red">05</span>
-                    <i class="fa-solid fa-truck-pickup text-slate-500 text-lg"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white uppercase mb-2">Пастка з евакуатором</h3>
-                <p class="text-xs text-slate-300 font-sans leading-relaxed">
-                    Коробка нерідко зависає на затиснутій передачі. Колеса заблоковані, затягнути авто на платформу без пошкодження трансмісії та гуми неможливо. Машина опиняється в заручниках.
-                </p>
-            </div>
-
-            <div class="p-5 bg-hud-card border-l-4 border-l-emerald-500 border border-hud-border rounded-r-xl">
-                <div class="flex items-center justify-between mb-3">
-                    <span class="text-2xl font-bold text-emerald-400">06</span>
-                    <i class="fa-solid fa-shield-halved text-slate-500 text-lg"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white uppercase mb-2">Наше рішення на виїзді</h3>
-                <p class="text-xs text-slate-300 font-sans leading-relaxed">
-                    Ми підключаємо спеціалізований дилерський комплекс MUT-III SE, примусово скидаємо завислий прапорець навчання, проводимо точне двохетапне калібрування і запускаємо двигун.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 3. COMPARISON TABLE: ДИЛЕРСЬКИЙ СОФТ VS МУЛЬТИМАРОЧНИК -->
-    <section class="py-12 lg:py-16 px-4 max-w-5xl mx-auto border-b border-hud-border">
-        <div class="text-center max-w-2xl mx-auto mb-10">
-            <span class="text-hud-cyan font-tech text-xs uppercase tracking-widest font-bold block mb-1">[ ТЕХНІЧНА РІЗНИЦЯ ]</span>
+    <!-- 2. ГОЛОВНІ БОЛІ (ЧОМУ ВИ ТУТ) -->
+    <section class="py-12 px-4 max-w-5xl mx-auto border-b border-hud-border">
+        <div class="text-center mb-8">
+            <span class="text-hud-yellow font-tech text-xs uppercase tracking-widest font-bold block mb-1">[ ТИПОВА СИТУАЦІЯ ]</span>
             <h2 class="font-tech text-2xl sm:text-3xl font-bold uppercase text-white">
-                Чому тільки MUT-III SE вирішує проблему
+                Впізнаєте свою проблему?
             </h2>
         </div>
 
-        <div class="overflow-x-auto">
-            <table class="w-full text-left font-tech border border-hud-border text-xs sm:text-sm">
-                <thead>
-                    <tr class="bg-slate-900/90 text-slate-300 border-b border-hud-border">
-                        <th class="p-4 uppercase">Параметр процедури</th>
-                        <th class="p-4 uppercase text-hud-red">Мультимарочники (Launch, Delphi)</th>
-                        <th class="p-4 uppercase text-hud-cyan">Дилерський MUT-III SE (Наш виїзд)</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-hud-border/60 bg-hud-card font-sans text-xs">
-                    <tr>
-                        <td class="p-4 font-tech font-bold text-white">Виведення з завислого нуля «0»</td>
-                        <td class="p-4 text-hud-red font-semibold">❌ Неможливо (видає помилку зв'язку)</td>
-                        <td class="p-4 text-emerald-400 font-semibold">✅ 100% апаратний скид циклу</td>
-                    </tr>
-                    <tr>
-                        <td class="p-4 font-tech font-bold text-white">Статичне навчання передач</td>
-                        <td class="p-4 text-slate-300">Часто обривається на вилці 1-2 передачі</td>
-                        <td class="p-4 text-emerald-400 font-semibold">✅ Повний прогін за заводською картою</td>
-                    </tr>
-                    <tr>
-                        <td class="p-4 font-tech font-bold text-white">Динамічне навчання точки торкання</td>
-                        <td class="p-4 text-hud-red font-semibold">❌ Відсутнє або реалізовано некоректно</td>
-                        <td class="p-4 text-emerald-400 font-semibold">✅ Замір у мм з контролем температури >60°C</td>
-                    </tr>
-                    <tr>
-                        <td class="p-4 font-tech font-bold text-white">Перевірка струму двигунів актуатора</td>
-                        <td class="p-4 text-slate-300">Не підтримується</td>
-                        <td class="p-4 text-emerald-400 font-semibold">✅ Live Data струмів у реальному часі</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="mt-8 text-center">
-            <a href="https://t.me/carhelpuabot" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-hud-tg hover:bg-sky-500 text-white font-tech text-base sm:text-lg uppercase tracking-wider font-bold rounded-lg shadow-hud-tg transition-transform active:scale-95">
-                <i class="fa-brands fa-telegram text-2xl"></i>
-                <span>Написати в Telegram</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- 4. DISTRICTS OF SERVICE (KYIV) -->
-    <section class="py-12 lg:py-16 px-4 max-w-6xl mx-auto border-b border-hud-border">
-        <div class="text-center max-w-2xl mx-auto mb-10">
-            <span class="text-hud-cyan font-tech text-xs uppercase tracking-widest font-bold block mb-1">[ ГЕОГРАФІЯ ОБСЛУГОВУВАННЯ ]</span>
-            <h2 class="font-tech text-2xl sm:text-3xl font-bold uppercase text-white">
-                Виїжджаємо до вашого авто по всьому Києву
-            </h2>
-            <p class="text-slate-400 text-xs sm:text-sm mt-2">Прибуваємо на сторонні СТО, у приватні гаражі, двори та підземні паркінги</p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 font-tech">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-tech">
             
-            <div class="p-4 bg-hud-card border border-hud-border hover:border-hud-cyan transition-colors rounded-lg">
-                <div class="flex items-center gap-2 text-hud-cyan font-bold text-base mb-1">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <h3>Солом'янський район</h3>
-                </div>
-                <p class="text-slate-400 text-xs font-sans">Солом'янка, Чоколівка, Відрадний, Караваєві Дачі, КПІ, Жуляни.</p>
+            <div class="p-4 bg-hud-card border-l-4 border-l-hud-red border border-hud-border rounded-r-lg">
+                <h3 class="text-white font-bold text-base uppercase mb-1">
+                    🛑 На табло горить «0» або прочерк «–»
+                </h3>
+                <p class="text-slate-300 font-sans text-xs sm:text-sm leading-snug">
+                    Запчастини нові, але автомобіль не реагує на поворот ключа. Стартер мовчить, авто стоїть мертво на підйомнику або у дворі.
+                </p>
             </div>
 
-            <div class="p-4 bg-hud-card border border-hud-border hover:border-hud-cyan transition-colors rounded-lg">
-                <div class="flex items-center gap-2 text-hud-cyan font-bold text-base mb-1">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <h3>Голосіївський район</h3>
-                </div>
-                <p class="text-slate-400 text-xs font-sans">Голосіїво, Теремки-1, Теремки-2, Деміївка, Саперна Слобідка, ВДНГ.</p>
+            <div class="p-4 bg-hud-card border-l-4 border-l-hud-yellow border border-hud-border rounded-r-lg">
+                <h3 class="text-white font-bold text-base uppercase mb-1">
+                    🛑 На СТО кажуть: «Згорів блок керування»
+                </h3>
+                <p class="text-slate-300 font-sans text-xs sm:text-sm leading-snug">
+                    Майстри не змогли завершити адаптацію своїм приладом і тепер перекладають провину на вас або радять шукати «мозги» на розборках.
+                </p>
             </div>
 
-            <div class="p-4 bg-hud-card border border-hud-border hover:border-hud-cyan transition-colors rounded-lg">
-                <div class="flex items-center gap-2 text-hud-cyan font-bold text-base mb-1">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <h3>Печерський район</h3>
-                </div>
-                <p class="text-slate-400 text-xs font-sans">Печерськ, Липки, Кловська, Дружби Народів (Звіринецька), бул. Лесі Українки.</p>
+            <div class="p-4 bg-hud-card border-l-4 border-l-hud-red border border-hud-border rounded-r-lg">
+                <h3 class="text-white font-bold text-base uppercase mb-1">
+                    🛑 Гроші за ремонт сплачені, а машини немає
+                </h3>
+                <p class="text-slate-300 font-sans text-xs sm:text-sm leading-snug">
+                    Ви вже віддали круглу суму за зчеплення чи актуатор та роботу, а натомість отримали повністю знерухомлену машину.
+                </p>
             </div>
 
-            <div class="p-4 bg-hud-card border border-hud-border hover:border-hud-cyan transition-colors rounded-lg">
-                <div class="flex items-center gap-2 text-hud-cyan font-bold text-base mb-1">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <h3>Подільський район</h3>
-                </div>
-                <p class="text-slate-400 text-xs font-sans">Поділ, Куренівка, Виноградар, Мостицький масив, Вітряні Гори.</p>
-            </div>
-
-            <div class="p-4 bg-hud-card border border-hud-border hover:border-hud-cyan transition-colors rounded-lg">
-                <div class="flex items-center gap-2 text-hud-cyan font-bold text-base mb-1">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <h3>Святошинський район</h3>
-                </div>
-                <p class="text-slate-400 text-xs font-sans">Борщагівка, Святошин, Академмістечко, Біличі, Новобіличі.</p>
-            </div>
-
-            <div class="p-4 bg-hud-card border border-hud-border hover:border-hud-cyan transition-colors rounded-lg">
-                <div class="flex items-center gap-2 text-hud-cyan font-bold text-base mb-1">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <h3>Шевченківський район</h3>
-                </div>
-                <p class="text-slate-400 text-xs font-sans">Центр, Лук'янівка, Татарка, Сирець, Дорогожичі, Нивки.</p>
+            <div class="p-4 bg-hud-card border-l-4 border-l-hud-yellow border border-hud-border rounded-r-lg">
+                <h3 class="text-white font-bold text-base uppercase mb-1">
+                    🛑 Передача затиснута, колеса заблоковані
+                </h3>
+                <p class="text-slate-300 font-sans text-xs sm:text-sm leading-snug">
+                    Авто навіть не можна закотити на евакуатор без ризику остаточно розірвати коробку та диференціал.
+                </p>
             </div>
 
         </div>
     </section>
 
-    <!-- 5. 4-STEP WORKFLOW -->
-    <section class="py-12 lg:py-16 px-4 max-w-4xl mx-auto border-b border-hud-border">
-        <div class="text-center mb-10">
-            <span class="text-hud-yellow font-tech text-xs uppercase tracking-widest font-bold block mb-1">[ ПОКРОКОВИЙ ПОРЯТОК ]</span>
-            <h2 class="font-tech text-2xl sm:text-3xl font-bold uppercase text-white">
-                Як ми повертаємо Colt до життя
+    <!-- 3. ШВИДКЕ РІШЕННЯ (ЩО МИ РОБИМО) -->
+    <section class="py-12 px-4 max-w-5xl mx-auto border-b border-hud-border">
+        <div class="hud-border p-6 sm:p-10 rounded-2xl relative overflow-hidden">
+            
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="text-hud-cyan font-tech text-xs uppercase tracking-widest font-bold block mb-1">[ ЯК МИ ЦЕ ВИРІШУЄМО ]</span>
+                <h2 class="font-tech text-2xl sm:text-4xl font-bold uppercase text-white">
+                    Запустимо авто за 30 хвилин без розбору та заміни блоків
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-tech text-center mb-8">
+                
+                <div class="p-4 bg-black/60 border border-hud-border rounded-lg">
+                    <div class="w-10 h-10 bg-hud-cyan/10 text-hud-cyan border border-hud-cyan/40 rounded-full flex items-center justify-center mx-auto mb-3 font-bold text-lg">1</div>
+                    <h3 class="text-white font-bold uppercase text-sm mb-1">Приїжджаємо до авто</h3>
+                    <p class="text-slate-400 font-sans text-xs">У будь-який район Києва — на СТО, паркінг чи у двір зі спецобладнанням.</p>
+                </div>
+
+                <div class="p-4 bg-black/60 border border-hud-border rounded-lg">
+                    <div class="w-10 h-10 bg-hud-yellow/10 text-hud-yellow border border-hud-yellow/40 rounded-full flex items-center justify-center mx-auto mb-3 font-bold text-lg">2</div>
+                    <h3 class="text-white font-bold uppercase text-sm mb-1">Знімаємо блокування «0»</h3>
+                    <p class="text-slate-400 font-sans text-xs">Апаратно виводимо блок зі ступору без його розкриття чи заміни.</p>
+                </div>
+
+                <div class="p-4 bg-black/60 border border-hud-border rounded-lg">
+                    <div class="w-10 h-10 bg-emerald-500/10 text-emerald-400 border border-emerald-500/40 rounded-full flex items-center justify-center mx-auto mb-3 font-bold text-lg">3</div>
+                    <h3 class="text-white font-bold uppercase text-sm mb-1">Ви їдете своїм ходом</h3>
+                    <p class="text-slate-400 font-sans text-xs">Правильно прописуємо нові деталі. Передачі вмикаються ідеально м'яко.</p>
+                </div>
+
+            </div>
+
+            <div class="text-center">
+                <a href="https://t.me/carhelpuabot" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-hud-tg hover:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold rounded-lg shadow-hud-tg transition-transform active:scale-95">
+                    <i class="fa-brands fa-telegram text-2xl"></i>
+                    <span>Написати в Telegram</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. РАЙОНИ ВИЇЗДУ -->
+    <section class="py-10 px-4 max-w-5xl mx-auto border-b border-hud-border">
+        <div class="text-center mb-6">
+            <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide">
+                📍 Працюємо по всіх районах Києва:
             </h2>
         </div>
 
-        <div class="space-y-3 font-tech">
-            
-            <div class="p-4 bg-hud-card border border-hud-border rounded-lg flex items-start gap-4">
-                <span class="w-8 h-8 rounded bg-hud-tg text-white flex items-center justify-center font-bold text-base flex-shrink-0">1</span>
-                <div>
-                    <h3 class="text-white font-bold text-base uppercase">Зв'язок у Telegram</h3>
-                    <p class="text-xs text-slate-300 font-sans mt-0.5">
-                        Скидаєте фото панелі приладів (символ «0», «–») та адресу в Києві, де знаходиться авто.
-                    </p>
-                </div>
-            </div>
-
-            <div class="p-4 bg-hud-card border border-hud-border rounded-lg flex items-start gap-4">
-                <span class="w-8 h-8 rounded bg-hud-yellow text-black flex items-center justify-center font-bold text-base flex-shrink-0">2</span>
-                <div>
-                    <h3 class="text-white font-bold text-base uppercase">Виїзд майстра на місце</h3>
-                    <p class="text-xs text-slate-300 font-sans mt-0.5">
-                        Спеціаліст прибуває з дилерським обладнанням MUT-III SE та необхідним монтажним інструментом.
-                    </p>
-                </div>
-            </div>
-
-            <div class="p-4 bg-hud-card border border-hud-border rounded-lg flex items-start gap-4">
-                <span class="w-8 h-8 rounded bg-hud-cyan text-black flex items-center justify-center font-bold text-base flex-shrink-0">3</span>
-                <div>
-                    <h3 class="text-white font-bold text-base uppercase">Апаратне розблокування та адаптація</h3>
-                    <p class="text-xs text-slate-300 font-sans mt-0.5">
-                        Скидання помилок P1825/P1861, виведення з блокування «0», статичне навчання положень передач та калібрування точки торкання.
-                    </p>
-                </div>
-            </div>
-
-            <div class="p-4 bg-hud-card border border-hud-border rounded-lg flex items-start gap-4">
-                <span class="w-8 h-8 rounded bg-emerald-500 text-white flex items-center justify-center font-bold text-base flex-shrink-0">4</span>
-                <div>
-                    <h3 class="text-white font-bold text-base uppercase">Запуск авто і тест-драйв</h3>
-                    <p class="text-xs text-slate-300 font-sans mt-0.5">
-                        Двигун запускається з півоберту, передачі вмикаються м'яко без ударів. Ви їдете своїм ходом!
-                    </p>
-                </div>
-            </div>
-
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-center font-tech text-xs">
+            <div class="p-2.5 bg-hud-card border border-hud-border rounded text-slate-200">Солом'янський</div>
+            <div class="p-2.5 bg-hud-card border border-hud-border rounded text-slate-200">Голосіївський</div>
+            <div class="p-2.5 bg-hud-card border border-hud-border rounded text-slate-200">Печерський</div>
+            <div class="p-2.5 bg-hud-card border border-hud-border rounded text-slate-200">Подільський</div>
+            <div class="p-2.5 bg-hud-card border border-hud-border rounded text-slate-200">Святошинський</div>
+            <div class="p-2.5 bg-hud-card border border-hud-border rounded text-slate-200">Шевченківський</div>
         </div>
     </section>
 
-    <!-- 6. FINAL BOTTOM CTA BLOCK -->
-    <section class="py-16 px-4 max-w-4xl mx-auto text-center">
-        <div class="p-8 sm:p-12 bg-gradient-to-b from-slate-900 to-black border border-hud-cyan/40 rounded-2xl shadow-hud-cyan relative overflow-hidden">
-            
-            <h2 class="font-tech text-3xl sm:text-4xl font-bold uppercase text-white mb-3 leading-tight">
-                Досить чекати дива від універсальних сканерів!
-            </h2>
-            <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-8 font-sans font-light leading-relaxed">
-                Навіть якщо вам сказали, що блок згорів — у 95% випадків це звичайний програмний тупик, який вирішується дилерським софтом за 20 хвилин на місці.
-            </p>
+    <!-- 5. FINAL ACTION BLOCK -->
+    <section class="py-14 px-4 max-w-3xl mx-auto text-center">
+        <h2 class="font-tech text-3xl sm:text-4xl font-bold uppercase text-white mb-3">
+            Потрібно терміново оживити автомобіль?
+        </h2>
+        <p class="text-slate-300 text-base mb-8 font-light">
+            Напишіть у Telegram, де знаходиться авто та що горить на панелі приладів. Майстер одразу проконсультує та виїде на місце.
+        </p>
 
-            <a href="https://t.me/carhelpuabot" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 bg-hud-tg hover:bg-sky-500 text-white font-tech text-xl uppercase tracking-wider font-bold rounded-lg shadow-hud-tg transition-transform active:scale-95 text-center">
-                <i class="fa-brands fa-telegram text-3xl"></i>
-                <span>Написати в Telegram</span>
-            </a>
-
-            <div class="text-[11px] text-slate-400 font-tech mt-4 uppercase tracking-wider">
-                Відповідаємо за 2-5 хвилин • Працюємо по всьому Києву без вихідних
-            </div>
-        </div>
+        <a href="https://t.me/carhelpuabot" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 bg-hud-tg hover:bg-sky-500 text-white font-tech text-xl uppercase tracking-wider font-bold rounded-lg shadow-hud-tg transition-transform active:scale-95 text-center">
+            <i class="fa-brands fa-telegram text-3xl"></i>
+            <span>Написати в Telegram</span>
+        </a>
     </section>
 
-    <!-- 7. PERSISTENT FIXED MOBILE FOOTER (FAST THUMB TAP) -->
+    <!-- MOBILE STICKY BUTTON -->
     <div class="fixed bottom-0 left-0 right-0 z-50 p-3 bg-slate-950/95 border-t border-hud-border/80 backdrop-blur-xl lg:hidden">
         <div class="max-w-md mx-auto">
             <a href="https://t.me/carhelpuabot" target="_blank" rel="noopener" class="w-full py-3.5 bg-hud-tg active:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 rounded-lg shadow-hud-tg">
